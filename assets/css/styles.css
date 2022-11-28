@@ -1,0 +1,190 @@
+.body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  grid-area: menu;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2B3A55;
+  padding: 1rem 1rem;
+}
+
+.navbar-brand {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+nav button {
+  background-color: transparent;
+  border: 0;
+}
+
+i {
+  color: white;
+}
+
+.selectorfiltro {
+  grid-area: buscar;
+  background-color: rgba(241, 234, 234, 0.847);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.contenedor {
+  grid-area: main;
+  background-color: white;
+
+  /* background-color: yellow; */
+}
+
+.articulos {
+  max-width: 100%;
+  /* margin: auto; */
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  body {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 15% 70% 15%;
+    grid-template-areas:
+      "menu buscar"
+      "menu main"
+      "pie main";
+    height: 100vh;
+  }
+
+  .articulos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 25px;
+    flex-wrap: wrap;
+    height: 85%;
+    overflow-y: auto;
+
+    /* justify-content: center; */
+  }
+
+  .paginacion {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 340px;
+    height: 400px;
+  }
+
+
+  .navbar {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+  }
+
+  .btn {
+    display: none !important;
+  }
+
+  .navbar-brand{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+
+  }
+
+  .lista {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-right: 10%;
+    /* background-color: yellow; */
+  }
+
+  .lista ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+  }
+
+
+  .lista ul li{
+    padding-top: 40%;
+  }
+  
+.lista ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+}
+
+.card {
+  border: 1px solid rgba(241, 234, 234, 0.847);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.card-body {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+main button {
+  background-color: rgb(164, 13, 13);
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border: none;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.piedepagina {
+  grid-area: pie;
+  background-color: rgb(164, 13, 13);
+  padding: 0.5rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.piedepagina p{
+    font-size: 18px;
+}
